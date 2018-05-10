@@ -4,50 +4,52 @@ import com.sortingassgn.main.SortInterface;
 
 public class QuickSort implements SortInterface
 {
+	public void quickSort(int[] arr, int low, int high) {
+		if (arr == null || arr.length == 0)
+			return;
+ 
+		if (low >= high)
+			return;
 
- int partition(int arr[], int low, int high)
- {
-     int pivot = arr[high]; 
-     int i = (low-1);
-     for (int j=low; j<high; j++)
-     {
-         
-         if (arr[j] <= pivot)
-         {
-             i++;
+		int middle = low + (high - low) / 2;
+		int pivot = arr[middle];
+ 
+		int i = low, j = high;
+		while (i <= j) {
+			while (arr[i] < pivot) {
+				i++;
+			}
+ 
+			while (arr[j] > pivot) {
+				j--;
+			}
+ 
+			if (i <= j) {
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+				i++;
+				j--;
+			}
+		}
+ 
 
-            
-             int temp = arr[i];
-             arr[i] = arr[j];
-             arr[j] = temp;
-         }
-     }
+		if (low < j)
+			quickSort(arr, low, j);
+ 
+		if (high > i)
+			quickSort(arr, i, high);
+	}
 
-     int temp = arr[i+1];
-     arr[i+1] = arr[high];
-     arr[high] = temp;
-
-     return i+1;
- }
-
- void sort(int arr[], int low, int high)
- {
-     if (low < high)
-     {
-         int pi = partition(arr, low, high);
-
-         sort(arr, low, pi-1);
-         sort(arr, pi+1, high);
-     }
- }
+ 
 
 
 @Override
 public void print(int arr[]) {
 	 
 	     int n = arr.length;
-	     QuickSort ob = new QuickSort();
-	     ob.sort(arr, 0, n-1);
+	   
+	     quickSort(arr, 0, n-1);
 	     
 	     for (int i=0; i<n; ++i)
 	         System.out.print(arr[i]+" ");

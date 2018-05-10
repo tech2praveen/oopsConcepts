@@ -9,7 +9,7 @@ public class mergeSort implements SortInterface {
 	  
 	        int n1 = m - l + 1;
 	        int n2 = r - m;
-	 
+	        
 	       
 	        int L[] = new int [n1];
 	        int R[] = new int [n2];
@@ -17,6 +17,7 @@ public class mergeSort implements SortInterface {
 	      
 	        for (int i=0; i<n1; ++i)
 	            L[i] = arr[l + i];
+	        
 	        for (int j=0; j<n2; ++j)
 	            R[j] = arr[m + 1+ j];
 	 
@@ -75,9 +76,8 @@ public class mergeSort implements SortInterface {
 		@Override
 		public void print(int arr[]) {
 		
-			 mergeSort ob = new mergeSort();
-		        ob.sort(arr, 0, arr.length-1);
-		 
+			
+		        sort(arr, 0, arr.length-1); 
 		        System.out.println("Sorted array: ");
 		        int n = arr.length;
 		        for (int i=0; i<n; ++i)
