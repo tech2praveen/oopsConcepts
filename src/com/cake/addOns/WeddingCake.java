@@ -8,7 +8,5 @@ public class WeddingCake implements Cake,Layers{
 	public void setLayers(int n) {
 		System.out.println("With "+n+" layers");
 	}
-	
-	
-	
+		
 }
