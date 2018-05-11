@@ -41,8 +41,6 @@ public class QuickSort implements SortInterface
 			quickSort(arr, i, high);
 	}
 
- 
-
 
 @Override
 public void print(int arr[]) {

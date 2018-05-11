@@ -8,11 +8,19 @@ public class SortMain {
 public static void main(String[] args) {
 	
 	sortFactory sort=new sortFactory();
-	int arr[]= {28,91,1,0,3,5,3,2,6,3};
+	Scanner s=new Scanner(System.in);
+	System.out.println("Enter the length of Array to sort:");
+	int len=s.nextInt();
+	int[] arr = new int[len];
+	System.out.println("Enter the Array to sort:");
+	for(int i=0;i<len;i++)
+	{
+	  arr[i]=(int) s.nextInt();
+	}
 	
 	System.out.println("enter the algorithm to sort: 1:Quicksort 2:MergeSort 3:BubbleSort 4:InsertionSort");
 	
-	Scanner s=new Scanner(System.in);
+
 	int in=s.nextInt();
 	
 	switch(in)

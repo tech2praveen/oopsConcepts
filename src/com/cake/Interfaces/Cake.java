@@ -14,4 +14,5 @@ public interface Cake {
 	 {
 		 System.out.println("flavouring the cake ");
 	 }
+	 
 }
