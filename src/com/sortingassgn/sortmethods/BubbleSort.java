@@ -21,7 +21,7 @@ public class BubbleSort implements SortInterface{
     }  
 
 	@Override
-	public void print(int arr[]) {
+	public void print(int arr[]) { 
 		 bubbleSort(arr);
 		 for(int i=0; i < arr.length; i++){  
              System.out.print(arr[i] + " ");  
