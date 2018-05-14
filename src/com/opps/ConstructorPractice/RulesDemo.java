@@ -5,7 +5,7 @@ class constructorDemo
 	{
 	public static int a=0;
 	
-		protected constructorDemo()
+		private constructorDemo()
 		{
 		System.out.println("Constructor called");	
 		}
@@ -30,10 +30,10 @@ public class RulesDemo {
 public static void main(String[] args) {
 	
 	constructorDemo c=constructorDemo.getInstance();
+	// Created 2 instances but since it is a singleton class, only one object is created.
 	constructorDemo d=constructorDemo.getInstance();
 	System.out.println(d.a);
-	System.out.println(c.a);
-	
+
 }
 }
 
