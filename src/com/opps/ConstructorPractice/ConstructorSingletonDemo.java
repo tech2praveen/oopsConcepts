@@ -25,7 +25,7 @@ class constructorDemo
 				
 	}
 	 	
-public class RulesDemo {
+public class ConstructorSingletonDemo {
 	
 public static void main(String[] args) {
 	

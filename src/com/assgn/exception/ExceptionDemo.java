@@ -11,7 +11,7 @@ public class ExceptionDemo {
 	 * 
 	 *Finally block throwns a warning saying that "finally block
 	 *doesnot end normally", it is because of return statement.
-	 *yFinal block is considered to be cleanup block, return is not generally expected in it.
+	 *Finally block is considered to be cleanup block, return is not generally expected in it.
 	 * 
 	 * 
 	 */
